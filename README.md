@@ -1,4 +1,4 @@
-# ClassAct
+# Generate Anchor
 
 A small utility plugin for generating anchor links from block content.
 

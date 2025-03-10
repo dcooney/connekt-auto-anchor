@@ -14,7 +14,9 @@
  * @package Connekt
  */
 
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
 
 /**
  * Plugin initialization class
@@ -68,7 +70,6 @@ class ConnektAutoAnchor_Plugin {
             'connektAutoAnchor',
             array(
                 'pluginDir'   => plugin_dir_url( __FILE__ ), 
-                'buttonLabel' => apply_filters( 'connekt_auto_anchor_button_label', __( 'Generate Anchor', 'connekt-auto-anchor' ) ),
                 'supported'   => apply_filters( 'connekt_auto_anchor_supported', [ 
                     'core/heading', 
                     'core/paragraph' 

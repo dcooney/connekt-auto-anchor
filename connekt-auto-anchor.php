@@ -84,4 +84,4 @@ class ConnektAutoAnchor_Plugin {
 }
 
 // Initialize plugin
-new ConnektAutoAnchor_Plugin();
+new ConnektAutoAnchor_Plugin(); 

@@ -1,18 +1,17 @@
 # ClassAct
 
-A microplugin for acting on Additional CSS classes per-block in the WordPress Editor.
-
-![classact-preview](https://github.com/user-attachments/assets/be2d005e-00fa-41db-b0c9-41042a5f6a05)
+A small utility plugin for generating anchor links from block content.
 
 The goal of this plugin is simple:
-* More easily see Additional CSS classes on a WordPress Block.
-* More easily and surgically remove additional CSS class names with a single click.
-* Preserves Core text input and stays in sync as you work.
+
+* Make it easy to dynamically generate an anchor from block content like headings and paragraphs.
+* Remove the manual entry from the anchor.
 
 ## Usage
+
 1. Upload and Activate Plugin
 2. Open the WordPress Block Editor
-3. In a Block Sidebar under the Advanced Panel, there is a field to work with CSS classes as tokens instead of a string.
-
-## Notes
-* The `<FormTokenField>` uses regex to attempt to limit inputs to valid CSS class names _(i.e., without a period)_. It can always be overridden using the text input above. YMMV.
+3. Add a `core/heading` block.
+4. Enter some content.
+5. Click the `#` button in the block toolbar.
+6. Anchor will be generated from the content of the heading.

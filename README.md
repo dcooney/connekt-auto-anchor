@@ -2,6 +2,8 @@
 
 A small utility plugin for generating anchor links from block content.
 
+<img width="455" alt="image" src="https://github.com/user-attachments/assets/eec058b6-54b4-490d-90fd-ba0f7ceff462" />
+
 The goal of this plugin is simple:
 
 * Make it easy to dynamically generate an anchor from block content like headings and paragraphs.

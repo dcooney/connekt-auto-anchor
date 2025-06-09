@@ -1,11 +1,8 @@
 .cache
-build
 node_modules
 vendor
-
 *.log
-
 .DS_Store
 Thumbs.db
-
 phpcs.xml
+*.map

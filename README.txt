@@ -11,12 +11,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://gnu.org/licenses/gpl-2.0.html
 
-A small utility plugin for generating anchor links from block content.
+A small microplugin for generating anchor links from block content.
 
 == Description ==
 
-**Easy Anchor** provides a simple way to dynamically generate anchor links for Heading and Paragraph blocks. Simply
-
+**Easy Anchor** provides a simple way to dynamically generate anchor links for Heading and Paragraph blocks. By clicking the anchor icon in the block toolbar, you can easily create an anchor link that can be used for navigation within your content.
 
 == Frequently Asked Questions ==
 

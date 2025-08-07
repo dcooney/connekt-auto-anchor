@@ -1,15 +1,14 @@
 <?php
 /**
- * Plugin Name: Connekt Auto Anchor
- * Plugin URI: https://connekthq.com
- * Description: A microplugin for auto generating anchor links from block content.
- * Version: 1.0.0 
- * Author: Darren Cooney
- * Author URI: https://connekthq.com
- * License: GPL-2.0+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain: connekt-auto-anchor
- * Domain Path: /languages
+ * Plugin Name: Easy Anchor
+ * Plugin URI:  https://connekthq.com
+ * Description: A microplugin for dynamically generating anchor links from block content.
+ * Author:      Darren Cooney
+ * Author URI:  https://connekthq.com
+ * License:     GPL-2.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: easy-anchor
+ * Version:     1.0.0
  * 
  * @package Connekt
  */
@@ -21,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin initialization class
  */
-class ConnektAutoAnchor_Plugin {
+class Easy_Anchor_Plugin {
     /**
      * Constructor
      */
@@ -34,15 +33,15 @@ class ConnektAutoAnchor_Plugin {
      * Define plugin constants
      */
     private function define_constants() {
-        define( 'CONNEKT_AUTO_ANCHOR_VERSION', '1.0.0' ); 
+        define( 'EASY_ANCHOR_VERSION', '1.0.0' ); 
     }
 
     /**
      * Initialize hooks
      */
     private function init_hooks() {
-        add_action( 'init', array( $this, 'load_textdomain' ) );
-        add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
+        add_action( 'init', [ $this, 'load_textdomain' ] );
+        add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_assets' ] );
     }
 
     /**
@@ -59,29 +58,29 @@ class ConnektAutoAnchor_Plugin {
         $asset_file = include( plugin_dir_path( __FILE__ ) . 'build' . '/editor.asset.php' );
         
         wp_enqueue_script(
-            'connekt-auto-anchor',
+            'easy-anchor',
             plugin_dir_url( __FILE__ ) . 'build' . '/editor.js',
             $asset_file['dependencies'],
             $asset_file['version']
         );
 
         wp_localize_script(
-            'connekt-auto-anchor',
-            'connektAutoAnchor',
-            array(
+            'easy-anchor',
+            'easyAnchor',
+            [
                 'pluginDir'   => plugin_dir_url( __FILE__ ), 
-                'supported'   => apply_filters( 'connekt_auto_anchor_supported', [ 
+                'supported'   => apply_filters( 'easy_anchor_supported', [ 
                     'core/heading', 
                     'core/paragraph' 
                     ] 
                 ),
-                'maxLength'   => apply_filters( 'connekt_auto_anchor_max_length', 30 ),
-            )
+                'maxLength'   => apply_filters( 'easy_anchor_max_length', 30 ),
+            ]
         );
 
-        wp_set_script_translations( 'connekt-auto-anchor', 'connekt-auto-anchor' );
+        wp_set_script_translations( 'easy-anchor', 'easy-anchor' );
     }
 }
 
 // Initialize plugin
-new ConnektAutoAnchor_Plugin(); 
+new Easy_Anchor_Plugin(); 

@@ -9,15 +9,15 @@ import { __ } from '@wordpress/i18n';
 /**
  * HOC for adding a `Generate Anchor` button to the block toolbar.
  */
-const addConnektAnchorControls = createHigherOrderComponent((BlockEdit) => {
+const addEasyAnchorControls = createHigherOrderComponent((BlockEdit) => {
 	return (props) => {
 		const { setAttributes, attributes, name } = props;
-		const { supported = [], maxLength = 30 } = connektAutoAnchor; 
+		const { supported = [], maxLength = 30 } = easyAnchor || {}; 
 
 		if (!supported.includes(name)) {
 			return <BlockEdit { ...props } /> // Return the original block if it's not supported
 		}
-		
+		 
 		/**
 		 * Sanitize the title to generate an anchor
 		 * @param {string} str The title to sanitize
@@ -49,7 +49,7 @@ const addConnektAnchorControls = createHigherOrderComponent((BlockEdit) => {
 			// Show snackbar message.
 			dispatch('core/notices').createNotice(
 				'success', // Can be one of: success, info, warning, error.
-				__('HTML Anchor set for block.', 'connekt-auto-anchor'),
+				__('HTML Anchor set for block.', 'easy-anchor'),
 				{
 					type: 'snackbar',
 					isDismissible: true,
@@ -76,7 +76,7 @@ const addConnektAnchorControls = createHigherOrderComponent((BlockEdit) => {
 					<ToolbarGroup>
 						<ToolbarButton
 							icon={ Icon }
-							label={__('Generate Anchor', 'connekt-auto-anchor')}
+							label={__('Generate Anchor', 'easy-anchor')}
 							onClick={ () => generateAnchor(attributes) }
 						/>
 					</ToolbarGroup>
@@ -86,4 +86,4 @@ const addConnektAnchorControls = createHigherOrderComponent((BlockEdit) => {
 	};
 }, 'withBlockControls');
 
-addFilter('editor.BlockEdit', 'connekt/anchor-controls', addConnektAnchorControls);
+addFilter('editor.BlockEdit', 'easy-anchor/controls', addEasyAnchorControls);

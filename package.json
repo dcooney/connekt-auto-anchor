@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
+		"dev": "npm run start",
 		"start": "wp-scripts start",
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Easy Anchor
- * Plugin URI:  https://connekthq.com
+ * Plugin URI:  https://github.com/dcooney/easy-anchor
  * Description: A microplugin for dynamically generating anchor links from block content.
  * Author:      Darren Cooney
  * Author URI:  https://connekthq.com
@@ -25,14 +25,14 @@ class Easy_Anchor_Plugin {
      * Constructor
      */
     public function __construct() {
-        $this->define_constants();
+        $this->constants();
         $this->actions();
     }
 
     /**
      * Define plugin constants.
      */
-    private function define_constants() {
+    private function constants() {
         define( 'EASY_ANCHOR_VERSION', '1.0.0' ); 
     }
 
@@ -40,15 +40,7 @@ class Easy_Anchor_Plugin {
      * Initialize action hooks.
      */
     private function actions() {
-        add_action( 'init', [ $this, 'load_textdomain' ] );
         add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_assets' ] );
-    }
-
-    /**
-     * Load plugin textdomain.
-     */
-    public function load_textdomain() {
-        load_plugin_textdomain( 'easy-anchor', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
     }
 
     /**

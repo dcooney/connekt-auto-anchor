@@ -78,6 +78,7 @@ const addEasyAnchorControls = createHigherOrderComponent((BlockEdit) => {
 							icon={ Icon }
 							label={__('Generate Anchor', 'easy-anchor')}
 							onClick={ () => generateAnchor(attributes) }
+							disabled={!attributes?.content?.text}
 						/>
 					</ToolbarGroup>
 				</BlockControls>

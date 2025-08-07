@@ -26,33 +26,33 @@ class Easy_Anchor_Plugin {
      */
     public function __construct() {
         $this->define_constants();
-        $this->init_hooks();
+        $this->actions();
     }
 
     /**
-     * Define plugin constants
+     * Define plugin constants.
      */
     private function define_constants() {
         define( 'EASY_ANCHOR_VERSION', '1.0.0' ); 
     }
 
     /**
-     * Initialize hooks
+     * Initialize action hooks.
      */
-    private function init_hooks() {
+    private function actions() {
         add_action( 'init', [ $this, 'load_textdomain' ] );
         add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_assets' ] );
     }
 
     /**
-     * Load plugin textdomain
+     * Load plugin textdomain.
      */
     public function load_textdomain() {
-        load_plugin_textdomain( 'easy-anchor', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+        load_plugin_textdomain( 'easy-anchor', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
     }
 
     /**
-     * Enqueue editor assets
+     * Enqueue editor assets.
      */
     public function enqueue_editor_assets() {
         $asset_file = include( plugin_dir_path( __FILE__ ) . 'build' . '/editor.asset.php' );
@@ -81,6 +81,6 @@ class Easy_Anchor_Plugin {
         wp_set_script_translations( 'easy-anchor', 'easy-anchor' );
     }
 }
-
-// Initialize plugin
-new Easy_Anchor_Plugin(); 
+if ( ! class_exists( 'Easy_Anchor_Plugin' ) ) {
+    new Easy_Anchor_Plugin(); // Initialize plugin. 
+}

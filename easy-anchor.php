@@ -10,7 +10,7 @@
  * Text Domain: easy-anchor
  * Version:     1.0.0
  * 
- * @package Connekt
+ * @package EasyAnchor
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -48,7 +48,7 @@ class Easy_Anchor_Plugin {
      * Load plugin textdomain
      */
     public function load_textdomain() {
-        load_plugin_textdomain( 'cnkt', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+        load_plugin_textdomain( 'easy-anchor', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
     }
 
     /**

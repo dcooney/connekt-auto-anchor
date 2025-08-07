@@ -2,7 +2,7 @@
 Contributors: dcooney, connekthq
 Author: Darren Cooney
 Author URI: https://connekthq.com/
-Plugin URI: https://connekthq.com/
+Plugin URI: https://github.com/dcooney/easy-anchor/
 Donate link: https://connekthq.com/donate/
 Tags: anchor, auto anchor, block anchor, block, utility
 Requires at least: 6.0

@@ -1,15 +1,15 @@
 === Easy Anchor ===
 Contributors: dcooney, connekthq
 Author: Darren Cooney
-Author URI: <https://connekthq.com/>
-Plugin URI: <https://github.com/dcooney/easy-anchor/>
-Donate link: <https://connekthq.com/donate/>
+Author URI: https://connekthq.com
+Plugin URI: https://github.com/dcooney/easy-anchor
+Donate link: https://connekthq.com/donate 
 Tags: anchor, auto anchor, block anchor, block, utility
 Requires at least: 6.0
 Tested up to: 6.8
 Stable tag: 1.0.0
 License: GPLv2 or later
-License URI: <http://gnu.org/licenses/gpl-2.0.html>
+License URI: http://gnu.org/licenses/gpl-2.0.html
 
 A small microplugin for generating anchor links from block content.
 
@@ -47,7 +47,7 @@ Heading and Paragraph blocks are supported.
 
 == Changelog ==
 
-= 1.0 - March 13, 2020 =
+= 1.0 - August 28, 2025 =
 
 * Initial Release.
 

@@ -27,28 +27,28 @@ if ( ! class_exists( 'Easy_Anchor_Plugin' ) ) {
          * Constructor
          */
         public function __construct() {
-            $this->constants();
-            $this->actions();
+            $this->easy_anchor_constants();
+            $this->easy_anchor_actions();
         }
 
         /**
          * Define plugin constants.
          */
-        private function constants() {
+        private function easy_anchor_constants() {
             define( 'EASY_ANCHOR_VERSION', '1.0.0' ); 
         }
 
         /**
          * Initialize action hooks.
          */
-        private function actions() {
-            add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_assets' ] );
+        private function easy_anchor_actions() {
+            add_action( 'enqueue_block_editor_assets', [ $this, 'easy_anchor_enqueue_editor_assets' ] );
         }
 
         /**
          * Enqueue editor assets.
          */
-        public function enqueue_editor_assets() {
+        public function easy_anchor_enqueue_editor_assets() {
             $suffix     = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min'; 
             $asset_file = include( plugin_dir_path( __FILE__ ) . 'build' . '/editor' . $suffix . '.asset.php' );
         
@@ -61,7 +61,7 @@ if ( ! class_exists( 'Easy_Anchor_Plugin' ) ) {
 
             wp_localize_script(
                 'easy-anchor',
-                'easyAnchor',
+                'easy_anchor_localize',
                 [
                     'pluginDir'   => plugin_dir_url( __FILE__ ), 
                     'supported'   => apply_filters( 'easy_anchor_supported', [ 
@@ -71,7 +71,7 @@ if ( ! class_exists( 'Easy_Anchor_Plugin' ) ) {
                     ),
                     'maxLength'   => apply_filters( 'easy_anchor_max_length', 30 ),
                 ]
-            );
+            ); 
 
             wp_set_script_translations( 'easy-anchor', 'easy-anchor' );
         }

@@ -12,7 +12,7 @@ import { __ } from '@wordpress/i18n';
 const addEasyAnchorControls = createHigherOrderComponent((BlockEdit) => {
 	return (props) => {
 		const { setAttributes, attributes, name } = props;
-		const { supported = [], maxLength = 30 } = easyAnchor || {}; 
+		const { supported = [], maxLength = 30 } = easy_anchor_localize || {}; 
 
 		if (!supported.includes(name)) {
 			return <BlockEdit { ...props } /> // Return the original block if it's not supported

@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "npm run start",
 		"start": "cross-env NODE_ENV=development wp-scripts start",
-		"build": "cross-env NODE_ENV=production wp-scripts build --config webpack.prod.js",
+		"build": "cross-env NODE_ENV=production wp-scripts build",
 		"format": "wp-scripts format",
 		"plugin-zip": "wp-scripts plugin-zip"
 	},

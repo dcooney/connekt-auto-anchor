@@ -7,14 +7,14 @@ const config = {
 		editor: path.resolve( __dirname, 'src/editor/index.js' ), 
 	},	
 	optimization: {
-		minimize: false,
+		minimize: true,
 		minimizer: [
 			new TerserPlugin({
 				extractComments: false,
 				test: /\.min.js(\?.*)?$/i,
 			}),
 		],
-	},
+	}, 
 };
 
 module.exports = merge(

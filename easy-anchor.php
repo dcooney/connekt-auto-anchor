@@ -49,12 +49,11 @@ if ( ! class_exists( 'Easy_Anchor_Plugin' ) ) {
          * Enqueue editor assets.
          */
         public function easy_anchor_enqueue_editor_assets() {
-            $suffix     = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min'; 
-            $asset_file = include( plugin_dir_path( __FILE__ ) . 'build' . '/editor' . $suffix . '.asset.php' );
+            $asset_file = include( plugin_dir_path( __FILE__ ) . 'build' . '/editor.asset.php' );
         
             wp_enqueue_script(
                 'easy-anchor',
-                plugin_dir_url( __FILE__ ) . 'build' . '/editor' . $suffix . '.js',
+                plugin_dir_url( __FILE__ ) . 'build' . '/editor.js',
                 $asset_file['dependencies'],
                 $asset_file['version']
             );

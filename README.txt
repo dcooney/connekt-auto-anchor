@@ -47,7 +47,7 @@ Heading and Paragraph blocks are supported.
 
 == Changelog ==
 
-= 1.0 - August 28, 2025 =
+= 1.0 - September 2, 2025 =
 
 * Initial Release.
 

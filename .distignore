@@ -9,6 +9,9 @@ bin
 .distignore
 .gitignore
 .editorconfig
+webpack.config.js
+README.md
+.nvmrc
 
 # File Types
 *.json

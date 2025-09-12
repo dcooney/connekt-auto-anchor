@@ -17,6 +17,8 @@ A small microplugin for generating anchor links from block content.
 
 **Easy Anchor** provides a simple way to dynamically generate anchor links for Heading and Paragraph blocks. By clicking the anchor icon in the block toolbar, you can easily create an anchor link that can be used for navigation within your content.
 
+![Easy Anchor](https://private-user-images.githubusercontent.com/428624/420999292-eec058b6-54b4-490d-90fd-ba0f7ceff462.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTc2OTg0MDAsIm5iZiI6MTc1NzY5ODEwMCwicGF0aCI6Ii80Mjg2MjQvNDIwOTk5MjkyLWVlYzA1OGI2LTU0YjQtNDkwZC05MGZkLWJhMGY3Y2VmZjQ2Mi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkxMlQxNzI4MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yZGZhMjU0MGUwZWRhMDhhNTJiOWE5YTA2NmViYTlhNDU1ODA4ZGJlNDQ5MTExMDNiN2E2ZmYzNzAwOGNjYTc1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.qgDQrqNpnAvNdAnX9KN-wjOSxPeULAt0in6n-eYHYDY "Easy Anchor Admin")
+
 View plugin source code on [Github](https://github.com/dcooney/easy-anchor)
 
 == Frequently Asked Questions ==
@@ -26,6 +28,8 @@ View plugin source code on [Github](https://github.com/dcooney/easy-anchor)
 Heading and Paragraph blocks are supported.
 
 == Screenshots ==
+
+1. Add a Heading or Paragraph block to your post or page and click the # icon in the block toolbar to generate an anchor link.
 
 == Installation ==
 
